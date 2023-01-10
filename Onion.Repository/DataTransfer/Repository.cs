@@ -23,7 +23,7 @@ namespace Onion.Repository.DataTransfer
         public IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter)
         {
             IQueryable<TEntity> queryable = _dbSet;
-            if (filter!=null)
+            if (filter != null)
             {
                 queryable = queryable.Where(filter);
             }

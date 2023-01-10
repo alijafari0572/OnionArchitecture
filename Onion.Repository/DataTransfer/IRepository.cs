@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace Onion.Repository.DataTransfer
 {
-    public interface IRepository<TEntity>:IDisposable where TEntity : BaseEntity
+    public interface IRepository<TEntity> : IDisposable where TEntity : BaseEntity
     {
-        IEnumerable<TEntity> Get(Expression<Func<TEntity,bool>>filter);
+        IEnumerable<TEntity> Get(Expression<Func<TEntity, bool>> filter);
         void Insert(TEntity tentity);
         void Update(TEntity tentity);
         void Delete(TEntity tentity);
